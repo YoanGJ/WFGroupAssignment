@@ -1,0 +1,2 @@
+class SchoolModule < ApplicationRecord
+end
