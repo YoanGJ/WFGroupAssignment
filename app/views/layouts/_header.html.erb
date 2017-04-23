@@ -6,7 +6,7 @@
             <li><%= link_to "Home", root_path %></li>
             
             <% if admin_logged_in? %>
-              <li><%= link_to "Module", "#" %></li>
+              <li><%= link_to "Module", school_modules_path %></li>
               <li><%= link_to "Module admin", "#" %></li>
               <li><%= link_to "Lecturer", "#" %></li>
               <li><%= link_to "Student", "#" %></li>

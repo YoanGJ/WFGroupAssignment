@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Module Admins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @module_admins.each do |module_admin| %>
+      <tr>
+        <td><%= module_admin.name %></td>
+        <td><%= module_admin.surname %></td>
+        <td><%= module_admin.email %></td>
+        <td><%= link_to 'Show', module_admin %></td>
+        <td><%= link_to 'Edit', edit_module_admin_path(module_admin) %></td>
+        <td><%= link_to 'Destroy', module_admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Module Admin', new_module_admin_path %>
