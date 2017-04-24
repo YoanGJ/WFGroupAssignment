@@ -69,6 +69,6 @@ class ModuleAdminsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def module_admin_params
-      params.require(:module_admin).permit(:name, :surname, :email)
+      params.require(:module_admin).permit(:name, :surname, :email, :password, :password_confirmation)
     end
 end
