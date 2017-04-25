@@ -7,9 +7,12 @@
             
             <% if admin_logged_in? %>
               <li><%= link_to "Module", school_modules_path %></li>
-              <li><%= link_to "Module admin", module_admins_path %></li>
-              <li><%= link_to "Lecturer", lecturers_path %></li>
-              <li><%= link_to "Student", students_path %></li>
+              <li><%= link_to "Module admins", module_admins_path %></li>
+              <li><%= link_to "Lecturers", lecturers_path %></li>
+              <li><%= link_to "Students", students_path %></li>
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% elsif student_logged_in? %>
+              <li><%= link_to "Module", school_modules_path %></li>
               <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             <% else %>
               <li><%= link_to "Log in",  login_path %></li>
