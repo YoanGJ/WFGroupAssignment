@@ -3,6 +3,11 @@ class SchoolModulesController < ApplicationController
 
   # GET /school_modules
   # GET /school_modules.json
+  
+  def choose
+    @school_modules = SchoolModule.all
+  end
+  
   def index
     @school_modules = SchoolModule.all
   end
@@ -71,4 +76,5 @@ class SchoolModulesController < ApplicationController
     def school_module_params
       params.require(:school_module).permit(:code, :name)
     end
+
 end

@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   post 'signup_lecturer' => 'lecturers#create'
   get 'signup_student' => 'students#new'
   post 'signup_student' => 'students#create'
+  get 'choose_module' => 'school_modules#choose'
+  get 'add_module_to_student' => 'school_modules#add_module_to_student'
+  get 'delete_module_for_student' => 'school_modules#delete_module_for_student'
 end

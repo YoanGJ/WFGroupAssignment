@@ -6,12 +6,19 @@
             <li><%= link_to "Home", root_path %></li>
             
             <% if admin_logged_in? %>
-              <li><%= link_to "Module", school_modules_path %></li>
+              <li><%= link_to "Modules", school_modules_path %></li>
               <li><%= link_to "Module admins", module_admins_path %></li>
               <li><%= link_to "Lecturers", lecturers_path %></li>
               <li><%= link_to "Students", students_path %></li>
               <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             <% elsif student_logged_in? %>
+              <li><%= link_to "Modules", choose_module_path %></li>
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% elsif lecturer_logged_in? %>
+              <li><%= link_to "Modules", school_modules_path %></li>
+              <li><%= link_to "Students", students_path %></li>
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+            <% elsif module_admin_logged_in? %>
               <li><%= link_to "Module", school_modules_path %></li>
               <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             <% else %>
