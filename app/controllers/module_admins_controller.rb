@@ -3,6 +3,26 @@ class ModuleAdminsController < ApplicationController
 
   # GET /module_admins
   # GET /module_admins.json
+  
+  def delete_link
+    @school_module = SchoolModule.find_by(id: params[:module_id])
+    @school_module.lecturers.clear
+    redirect_to link_module_to_lecturer_path
+  end
+  
+  def validate_link
+      @school_module = SchoolModule.find_by(id: params[:module_id])
+      @lecturer = Lecturer.find_by(id: params[:lecturer_id])
+      @school_module.lecturers.clear
+      @school_module.lecturers << @lecturer
+      redirect_to link_module_to_lecturer_path
+  end
+  
+  def link_module_to_lecturer
+    @school_modules = SchoolModule.all
+    @lecturers = Lecturer.all
+  end
+  
   def index
     @module_admins = ModuleAdmin.all
   end

@@ -19,7 +19,7 @@
               <li><%= link_to "Students", students_path %></li>
               <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             <% elsif module_admin_logged_in? %>
-              <li><%= link_to "Module", school_modules_path %></li>
+              <li><%= link_to "Modules", link_module_to_lecturer_path %></li>
               <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             <% else %>
               <li><%= link_to "Log in",  login_path %></li>

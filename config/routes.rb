@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   get 'choose_module' => 'school_modules#choose'
   get 'add_module_to_student' => 'school_modules#add_module_to_student'
   get 'delete_module_for_student' => 'school_modules#delete_module_for_student'
+  get 'link_module_to_lecturer' => 'module_admins#link_module_to_lecturer'
+  get 'validate_link' => 'module_admins#validate_link'
+  get 'delete_link' => 'module_admins#delete_link'
 end

@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       log_in_lecturer lecturer
       redirect_to lecturer
     elsif module_admin && module_admin.authenticate(params[:session][:password])
-      log_in_lecturer module_admin
+      log_in_module_admin module_admin
       redirect_to module_admin
     else
       flash.now[:danger] = 'Invalid email/password combination'
