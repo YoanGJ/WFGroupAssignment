@@ -4,6 +4,12 @@ class ModuleAdminsController < ApplicationController
   # GET /module_admins
   # GET /module_admins.json
   
+  def destroy_it_module_admin
+    @module_admin = ModuleAdmin.find_by(id: params[:id])
+    @module_admin.destroy
+    redirect_to module_admins_path
+  end
+  
   def delete_link
     @school_module = SchoolModule.find_by(id: params[:module_id])
     @school_module.lecturers.clear

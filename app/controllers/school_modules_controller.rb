@@ -4,6 +4,12 @@ class SchoolModulesController < ApplicationController
   # GET /school_modules
   # GET /school_modules.json
   
+  def destroy_it_module
+    @school_module = SchoolModule.find_by(id: params[:id])
+    @school_module.destroy
+    redirect_to school_modules_path
+  end
+  
   def choose
     @school_modules = SchoolModule.all
   end

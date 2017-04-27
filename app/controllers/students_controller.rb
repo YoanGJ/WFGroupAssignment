@@ -4,6 +4,12 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   
+  def destroy_it_student
+    @student = Student.find_by(id: params[:id])
+    @student.destroy
+    redirect_to students_path
+  end
+  
   def index
     @students = Student.all
   end

@@ -11,9 +11,7 @@
         <td> | </td>
         <td><%= link_to 'Show', lecturer %></td>
         <td> | </td>
-        <td><%= link_to 'Edit', edit_lecturer_path(lecturer) %></td>
-        <td> | </td>
-        <td><%= link_to 'Destroy', lecturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', destroy_it_lecturer_path(id: lecturer.id) %></td>
         <br>
       </tr>
     <% end %>

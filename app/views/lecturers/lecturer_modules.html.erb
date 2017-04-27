@@ -9,8 +9,10 @@
             
         <h4>Students</h4>
         
-        <% school_module.students.each do |student| %>
-            <td><%= student.first_name %> <%= student.last_name %></td>
+        <% if !school_module.students.empty?  %>
+          <% school_module.students.each do |student| %>
+              <td><%= student.first_name %> <%= student.last_name %></td>
+          <% end %>
         <% end %>
         
     <% end %>

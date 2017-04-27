@@ -4,6 +4,12 @@ class LecturersController < ApplicationController
   # GET /lecturers
   # GET /lecturers.json
   
+  def destroy_it_lecturer
+    @lecturer = Lecturer.find_by(id: params[:id])
+    @lecturer.destroy
+    redirect_to lecturers_path
+  end
+  
     def lecturer_modules
         @school_modules = current_lecturer.school_modules.all
     end

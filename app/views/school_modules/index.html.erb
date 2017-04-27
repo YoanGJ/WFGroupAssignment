@@ -10,9 +10,7 @@
         <td> | </td>
         <td><%= link_to 'Show', school_module %></td>
         <td> | </td>
-        <td><%= link_to 'Edit', edit_school_module_path(school_module) %></td>
-        <td> | </td>
-        <td><%= link_to 'Destroy', school_module, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', destroy_it_module_path(id: school_module.id) %></td>
       </tr>
       <br>
     <% end %>

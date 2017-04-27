@@ -26,4 +26,8 @@ Rails.application.routes.draw do
   get 'validate_link' => 'module_admins#validate_link'
   get 'delete_link' => 'module_admins#delete_link'
   get 'lecturer_modules' => 'lecturers#lecturer_modules'
+  get 'destroy_it_module' => 'school_modules#destroy_it_module'
+  get 'destroy_it_module_admin' => 'module_admins#destroy_it_module_admin'
+  get 'destroy_it_lecturer' => 'lecturers#destroy_it_lecturer'
+  get 'destroy_it_student' => 'students#destroy_it_student'
 end

@@ -16,10 +16,12 @@
             
         <h4>Lecturers available</h4>
         <% @lecturers.each do |lecturer| %>
-            <% if !school_module.lecturers.find_by(id: lecturer.id) %>
-                <td><%= lecturer.name %> <%= lecturer.surname%> | </td>
-                <%= link_to 'Select', validate_link_path(module_id: school_module.id, lecturer_id: lecturer.id) %>
-                <br>
+            <% if !school_module.lecturers.empty? %>
+                <% if !school_module.lecturers.find_by(id: lecturer.id) %>
+                    <td><%= lecturer.name %> <%= lecturer.surname%> | </td>
+                    <%= link_to 'Select', validate_link_path(module_id: school_module.id, lecturer_id: lecturer.id) %>
+                    <br>
+                <% end %>
             <% end %>
         <% end %>
         

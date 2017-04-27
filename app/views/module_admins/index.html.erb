@@ -11,9 +11,7 @@
         <td> | </td>
         <td><%= link_to 'Show', module_admin %></td>
         <td> | </td>
-        <td><%= link_to 'Edit', edit_module_admin_path(module_admin) %></td>
-        <td> | </td>
-        <td><%= link_to 'Destroy', module_admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', destroy_it_module_admin_path(id: module_admin.id) %></td>
         <br>
       </tr>
     <% end %>
