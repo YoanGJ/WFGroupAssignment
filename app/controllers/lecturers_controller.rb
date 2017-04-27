@@ -3,6 +3,11 @@ class LecturersController < ApplicationController
 
   # GET /lecturers
   # GET /lecturers.json
+  
+    def lecturer_modules
+        @school_modules = current_lecturer.school_modules.all
+    end
+  
   def index
     @lecturers = Lecturer.all
   end

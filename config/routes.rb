@@ -25,4 +25,5 @@ Rails.application.routes.draw do
   get 'link_module_to_lecturer' => 'module_admins#link_module_to_lecturer'
   get 'validate_link' => 'module_admins#validate_link'
   get 'delete_link' => 'module_admins#delete_link'
+  get 'lecturer_modules' => 'lecturers#lecturer_modules'
 end

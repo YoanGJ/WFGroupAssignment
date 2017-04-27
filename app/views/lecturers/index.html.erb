@@ -8,9 +8,13 @@
         <td><%= lecturer.name %></td>
         <td><%= lecturer.surname %></td>
         <td><%= lecturer.email %></td>
+        <td> | </td>
         <td><%= link_to 'Show', lecturer %></td>
+        <td> | </td>
         <td><%= link_to 'Edit', edit_lecturer_path(lecturer) %></td>
+        <td> | </td>
         <td><%= link_to 'Destroy', lecturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <br>
       </tr>
     <% end %>
   </tbody>

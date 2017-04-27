@@ -8,9 +8,13 @@
         <td><%= module_admin.name %></td>
         <td><%= module_admin.surname %></td>
         <td><%= module_admin.email %></td>
+        <td> | </td>
         <td><%= link_to 'Show', module_admin %></td>
+        <td> | </td>
         <td><%= link_to 'Edit', edit_module_admin_path(module_admin) %></td>
+        <td> | </td>
         <td><%= link_to 'Destroy', module_admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <br>
       </tr>
     <% end %>
   </tbody>
